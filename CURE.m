@@ -8,7 +8,7 @@ function [Label, Cluster] = CURE(X, alpha, c, k)
 % Outputs:
 %   - Label: the label of samples
 %   - Cluster: the struct of every subCludters
-% by Kun Chu <chukun1997@163.com>
+% by Kun Chu <kun_chu@outlook.com>
 
 %% Initialization
 numPts = size(X,1);
