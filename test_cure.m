@@ -1,7 +1,7 @@
-%clear 
-tic
+clear all;
+close all;
 %load flame.mat
-load('3clus.mat') % Parameter: c = 3; alpha = 0.2; k = 3;
+load('3clus.mat') % Parameter: c = 3; alpha = 0.3; k = 3;
 %load('Aggregation.mat') % Parameter: c = 8; alpha = 0.62; k = 7;
 %load('t4_8k.mat') % Parameter:c = 9; alpha = 0.51; k = 8; jianyi
 %load('spiral.mat') % Parameter: c = 5; alpha = 0.1; k = 2;
@@ -23,15 +23,16 @@ load('3clus.mat') % Parameter: c = 3; alpha = 0.2; k = 3;
 %load('test.txt');X=test;   % Parameter: c = 3; alpha = 0.5; k = 2;
 %load('R15.txt');X=R15(:,1:2);True = R15(:,3);   % Parameter: c = 10; alpha = 0.9; k = 15;
 c = 3; 
-alpha = 0.2;
+alpha = 0.3;
 k = 3;
 [Label, Cluster] = CURE(X, alpha, c, k);
-toc
-figure,
+
+figure
+subplot(1,2,1);
 plot(X(:,1),X(:,2),'.');
-figure,
+subplot(1,2,2);
 PlotClusterinResult(X, Label);
-N = nmi(True,Label);
+N = nmi(Y, Label);
 
 
 

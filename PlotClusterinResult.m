@@ -20,7 +20,7 @@ function PlotClusterinResult(Pts, ClusterResult)
             Style = '.';
             MarkerSize = 8;
             Color = Colors(i,:);
-            Legends{end+1} = ['Cluster #' num2str(i)];
+            Legends{end+1} = ['Cluster ' num2str(i)];
         else  % noise, use black 'x' to mark
             Style = 'x';
             MarkerSize = 6;
@@ -38,6 +38,6 @@ function PlotClusterinResult(Pts, ClusterResult)
     axis equal;
     grid on;
     legend(Legends);
-    legend('Location', 'NorthEastOutside');
+%     legend('Location', 'NorthEastOutside');
 
 end
